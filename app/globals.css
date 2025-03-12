@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+
+@layer base {
+  :root {
+    --background: 215 28% 17%;
+    --foreground: 210 40% 98%;
+    --card: 215 30% 22%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 30% 22%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 47 95% 57%;
+    --primary-foreground: 215 28% 17%;
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 25% 27%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 47 95% 57%;
+    --accent-foreground: 215 28% 17%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 47 95% 57%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Syne", sans-serif;
+  }
+
+  .heading-highlight {
+    @apply text-primary font-bold;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-6 md:mb-10;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground text-lg mb-12;
+  }
+
+  .tech-icon {
+    @apply w-12 h-12 object-contain transition-all duration-300 hover:scale-110 grayscale hover:grayscale-0;
+  }
+
+  .sidebar-link {
+    @apply relative flex items-center gap-2 py-2 px-4 text-muted-foreground hover:text-primary transition-colors duration-300;
+  }
+
+  .sidebar-link.active {
+    @apply text-primary;
+  }
+
+  .sidebar-link.active::before {
+    content: "";
+    @apply absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-primary rounded-r;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-primary/10;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent;
+  }
+
+  .section-container {
+    @apply py-20 md:py-28 min-h-screen flex flex-col justify-center;
+  }
+
+  .particle {
+    @apply absolute rounded-full bg-primary/30 pointer-events-none;
+    animation: float 6s infinite ease-in-out;
+  }
+
+  .progress-bar {
+    @apply h-1 bg-primary/20 rounded-full overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply h-full bg-primary rounded-full;
+  }
+}
+
+@layer utilities {
+  .grayscale {
+    filter: grayscale(100%);
+  }
+  .grayscale-0 {
+    filter: grayscale(0%);
+  }
+}
