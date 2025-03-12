@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Ishaqullah Siddiqui | Portfolio',
-  description: 'Created with Ishaqullah Siddiqui',
+  description: 'Created by Ishaqullah Siddiqui',
   // generator: 'v0.dev',
 }
 
