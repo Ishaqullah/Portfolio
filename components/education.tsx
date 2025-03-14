@@ -11,7 +11,7 @@ export default function Education() {
       degree: "Bachelor in Computer Science",
       institution: "FAST NUCES",
       period: "2020-2024",
-      details: "CGPA: 3.52",
+      details: "CGPA: 3.56",
       awards: [
         "Dean's List of Honour (Oct 2023)",
         "Dean's List of Honour (Oct 2022)",
